@@ -1,0 +1,99 @@
+.sidebar{
+    min-height: 100vh;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: hsl(213, 43%, 96%);
+    padding: 20px;
+    font-weight: bold;
+    width: 100px;
+    transition: width 0.3s ease; /* Smooth transition */
+}
+.sidebar.expanded {
+    width: 300px; /* Width when expanded */
+}
+
+
+.menu{
+    display: block;
+    cursor: pointer;
+    transition: width 0.3s ease,background 0.3s ease;
+    border-radius: 50%;
+    width: 50px;
+    height: auto;
+    padding: 10px;
+}
+.menu:hover{
+        background-color: hsl(218, 28%, 82%);
+}
+.new-chat{
+    margin-top: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: hsl(218, 28%, 92%);
+    font-size: 16px;
+    color: grey;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: font-size ease 0.25s,background ease 0.25s;
+}
+.new-chat img,.recent img,.bottom img{
+    width: 30px;
+    height: auto;
+}
+
+.new-chat:hover{
+    background-color: hsl(218, 28%, 82%);
+    font-size: 18px;
+    
+}
+
+.recent{
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1.5s;
+}
+.recent-title{
+margin-top: 30px;
+margin-bottom: 15px;
+font-size: 1.2rem;
+margin-left: 15px;
+}
+
+.recent-entry{
+    display: flex;
+    align-items: start;
+    gap:10px;
+    padding: 10px 10px;
+    padding-right: 40px;
+    border-radius: 50px;
+    color:#282828;
+    cursor: pointer;
+    font-size: 14px;
+    transition: font-size 0.25s ease, background-color 0.25s ease; 
+    
+}
+.recent-entry p{
+    margin-top: 4px;
+}
+.recent-entry:hover{
+    background-color: hsl(213, 43%, 86%);
+    font-size: 16px;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+}
+.bottom-item{
+    padding-right: 10px;
+}
+
+
+@media (max-width:600px){
+    .sidebar{
+        display: none;
+    }
+}
